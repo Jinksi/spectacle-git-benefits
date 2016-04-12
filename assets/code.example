@@ -1,9 +1,1 @@
-import Awesome from 'react';
-
-export default (props) => {
-  return (
-      <div>
-        {this.props.foo}
-      </div>
-  );
-};
+git commit -m 'Changed Something'
