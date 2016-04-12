@@ -1,1 +1,9 @@
-git commit -m 'Changed Something'
+brew install git
+
+git init
+
+git add index.html
+
+git commit -m 'Added index.html to project'
+
+git clone git@github.com:Jinksi/spectacle-git-benefits.git my-folder
