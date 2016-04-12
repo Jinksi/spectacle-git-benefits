@@ -42,7 +42,9 @@ const images = {
   bb: require("../assets/bb.png"),
   gh: require("../assets/gh.png"),
   sourcetreeApp: require("../assets/sourcetree-app.png"),
-  githubApp: require("../assets/github-app.png")
+  githubApp: require("../assets/github-app.png"),
+  githubAppUsage: require("../assets/githubAppUsage.gif")
+
 };
 
 preloader(images);
@@ -177,6 +179,10 @@ export default class Presentation extends React.Component {
             <Link bold caps href="https://desktop.github.com/" textColor="white">Github App
               <Image margin="25px 0" src={images.githubApp} width="100%"/>
             </Link>
+          </Slide>
+
+          <Slide bgColor="black">
+            <Image src={images.githubAppUsage} width="100%"/>
           </Slide>
 
           <Slide bgColor="black">
