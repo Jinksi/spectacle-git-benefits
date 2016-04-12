@@ -43,7 +43,8 @@ const images = {
   gh: require("../assets/gh.png"),
   sourcetreeApp: require("../assets/sourcetree-app.png"),
   githubApp: require("../assets/github-app.png"),
-  githubAppUsage: require("../assets/githubAppUsage.gif")
+  githubAppUsage: require("../assets/githubAppUsage.gif"),
+  githubAppUsage2: require("../assets/githubAppUsage2.gif")
 
 };
 
@@ -182,7 +183,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgColor="black">
-            <Image src={images.githubAppUsage} width="100%"/>
+            <Image src={images.githubAppUsage2} width="100%"/>
           </Slide>
 
           <Slide bgColor="black">
@@ -201,12 +202,22 @@ export default class Presentation extends React.Component {
             transition={["slide"]}
             code={require("raw!../assets/code.example")}
             ranges={[
-              { loc: [0, 1], title: "Initialise Git Repo" },
-              { loc: [2, 3], title: "index.html awesome" },
-              { loc: [4, 5], title: "Import dependencies" },
-              { loc: [6, 7], title: "Import dependencies" }
+              { title: "Git Commands ( Rough Guide )" },
+              { title: "Git Commands ( Rough Guide )", loc: [0, 1], note: "install Git" },
+              { title: "Git Commands ( Rough Guide )", loc: [2, 3], note: "initialise Git Repo" },
+              { title: "Git Commands ( Rough Guide )", loc: [4, 5], note: "prepare index.html for commit" },
+              { title: "Git Commands ( Rough Guide )", loc: [6, 7], note: "commit with a descriptive message" },
+              { title: "Git Commands ( Rough Guide )", loc: [8, 9], note: "check the current working tree status" },
+              { title: "Git Commands ( Rough Guide )", loc: [10, 11], note: "push to remote repo" },
+              { title: "Git Commands ( Rough Guide )", loc: [12, 13], note: "clone an existing remote repo into the 'my-folder' directory" },
+              { title: "Git Commands ( Rough Guide )", loc: [14, 15], note: "how do I do this again?" }
             ]}
             />
+
+          <Slide bgColor="black">
+            <Heading caps>DOCS</Heading>
+            <Link href="https://git-scm.com/book/en/v1/Getting-Started-Installing-Git"><Image width="50%" src={images.git}/></Link>
+          </Slide>
 
           <Slide bgColor="black">
             <Heading size={1} caps fit textColor="primary" textFont="primary" margin="0 0 25px">
