@@ -101,12 +101,27 @@ export default class Presentation extends React.Component {
             <Text textColor="white" margin="5vh auto" bgColor="black" padding="3rem">
               Git keeps “snapshots” of your project
             </Text>
-            <Text>
-              Every time you “commit” a change, you describe it.
-            </Text>
-            <Text>
-              You can go back through each commit in your project's history to view or undo you changes.
-            </Text>
+            <List>
+              <Appear>
+                <ListItem>
+                  Every time you “commit” a change, you describe it.
+                </ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>
+                  You can go back through each commit in your project's history to view or undo you changes.
+                </ListItem>
+              </Appear>
+            </List>
+          </Slide>
+
+          <Slide bgColor="black" transition={["fade"]}>
+            <BlockQuote textColor="white" size={1}>
+              <Quote textSize="3rem" textColor="white">
+                It's like photoshop history for coders
+              </Quote>
+              <Cite>Bjorn</Cite>
+            </BlockQuote>
           </Slide>
 
           <Slide id="benefit-2">
@@ -118,12 +133,18 @@ export default class Presentation extends React.Component {
               <Image display="inline-block" height="40px" src={images.gh} />
               <Image display="inline-block" height="40px" src={images.bb} />
             </Text>
-            <Text>
-              Your work is safe if your computer explodes or office burns down.
-            </Text>
-            <Text>
-              Easy to share & “clone” project. You can push/pull changes to multiple computers.
-            </Text>
+            <List>
+              <Appear>
+                <ListItem>
+                  Your work is safe if your computer explodes or office burns down.
+                </ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>
+                  Easy to share & “clone” project. You can push/pull changes to multiple computers.
+                </ListItem>
+              </Appear>
+            </List>
           </Slide>
 
           <Slide id="benefit-3">
@@ -131,12 +152,18 @@ export default class Presentation extends React.Component {
             <Text textColor="white" margin="5vh auto" bgColor="black" padding="3rem">
               Multiple people can work on the same project simultaneously
             </Text>
-            <Text>
-              and the changes can “merged” with ease.
-            </Text>
-            <Text>
-              No risk of overwriting each other's code.
-            </Text>
+            <List>
+              <Appear>
+                <ListItem>
+                  the changes can “merged” with ease.
+                </ListItem>
+              </Appear>
+              <Appear>
+                <ListItem>
+                  no risk of overwriting each other's code.
+                </ListItem>
+              </Appear>
+            </List>
           </Slide>
 
           <Slide bgColor="black">
@@ -168,7 +195,10 @@ export default class Presentation extends React.Component {
             transition={["slide"]}
             code={require("raw!../assets/code.example")}
             ranges={[
-              { loc: [0, 1], title: "Import dependencies" }
+              { loc: [0, 1], title: "Initialise Git Repo" },
+              { loc: [2, 3], title: "index.html awesome" },
+              { loc: [4, 5], title: "Import dependencies" },
+              { loc: [6, 7], title: "Import dependencies" }
             ]}
             />
 
