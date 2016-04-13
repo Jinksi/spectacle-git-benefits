@@ -179,12 +179,8 @@ export default class Presentation extends React.Component {
 
           <Slide bgColor="black">
             <Link bold caps href="https://desktop.github.com/" textColor="white">Github App
-              <Image margin="25px 0" src={images.githubApp} width="100%"/>
+              <Image margin="25px 0" src={images.githubAppUsage2} width="100%"/>
             </Link>
-          </Slide>
-
-          <Slide bgColor="black">
-            <Image src={images.githubAppUsage2} width="100%"/>
           </Slide>
 
           <Slide bgColor="black">
@@ -209,41 +205,18 @@ export default class Presentation extends React.Component {
             ]}
             />
 
-          <Slide bgColor="black">
+          <Slide bgColor="primary">
             <Heading caps>DOCS</Heading>
-            <Link href="https://git-scm.com/book/en/v1/Getting-Started-Installing-Git"><Image width="50%" src={images.git}/></Link>
+            <Link textColor="white" textSize="3rem" href="https://git-scm.com/book/en/v1/Getting-Started-Installing-Git">git-scm.com</Link>
           </Slide>
 
           <Slide bgColor="black">
             <Heading size={1} caps fit textColor="primary" textFont="primary" margin="0 0 25px">
               Git & Wordpress
             </Heading>
-            <Heading fill size={1} caps>
-              My Workflow
-            </Heading>
-          </Slide>
-
-          <Slide bgColor="white">
-            <Heading textColor="primary" fit size={1} caps>
-              My Workflow
-            </Heading>
-            <Text textSize="4rem" margin="2rem">Step 1</Text>
-            <Text fit textSize="4rem"><S type="bold">Create an empty remote repo on bitbucket.</S></Text>
-
-            <List>
+            <List textColor="white">
               <ListItem>
-                <S type="bold">Initialise the local theme folder as a git repo.</S>
-                <Text margin="1rem 2rem">I only add the theme folder, it contains the working code.</Text>
-              </ListItem>
-              <ListItem>
-                <S type="bold">Add the bitbucket repo as remote.</S>
-                <Markdown>`git remote add origin`</Markdown>
-              </ListItem>
-              <ListItem>
-                4. Make an initial commit & push.
-              </ListItem>
-              <ListItem>
-                5. Profit
+                <Text></Text>
               </ListItem>
             </List>
           </Slide>
