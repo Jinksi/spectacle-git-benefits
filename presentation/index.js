@@ -19,7 +19,8 @@ import {
   Quote,
   Slide,
   Spectacle,
-  Text
+  Text,
+  S
 } from "spectacle";
 
 import CodeSlide from 'spectacle-code-slide';
@@ -69,7 +70,7 @@ export default class Presentation extends React.Component {
               Git Benefits
             </Heading>
             <Text caps>
-              Why should I use git?
+              The benefits of using version-control in your project
             </Text>
             <br/>
             <Link href="https://github.com/Jinksi/spectacle-git-benefits">
@@ -187,12 +188,6 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide bgColor="black">
-            <Link bold caps href="https://www.sourcetreeapp.com/" textColor="white">Sourcetree
-              <Image margin="25px 0" src={images.sourcetreeApp} width="100%"/>
-            </Link>
-          </Slide>
-
-          <Slide bgColor="black">
             <Heading textColor="primary" fit caps>How do I use Git?</Heading>
             <Heading fit caps textColor="white">2. Use the command line</Heading>
           </Slide>
@@ -202,7 +197,7 @@ export default class Presentation extends React.Component {
             transition={["slide"]}
             code={require("raw!../assets/code.example")}
             ranges={[
-              { title: "Git Commands ( Rough Guide )" },
+              { title: "Git Commands ( Rough Guide )", loc: [0, 15] },
               { title: "Git Commands ( Rough Guide )", loc: [0, 1], note: "install Git" },
               { title: "Git Commands ( Rough Guide )", loc: [2, 3], note: "initialise Git Repo" },
               { title: "Git Commands ( Rough Guide )", loc: [4, 5], note: "prepare index.html for commit" },
@@ -223,8 +218,35 @@ export default class Presentation extends React.Component {
             <Heading size={1} caps fit textColor="primary" textFont="primary" margin="0 0 25px">
               Git & Wordpress
             </Heading>
+            <Heading fill size={1} caps>
+              My Workflow
+            </Heading>
           </Slide>
 
+          <Slide bgColor="white">
+            <Heading textColor="primary" fit size={1} caps>
+              My Workflow
+            </Heading>
+            <Text textSize="4rem" margin="2rem">Step 1</Text>
+            <Text fit textSize="4rem"><S type="bold">Create an empty remote repo on bitbucket.</S></Text>
+
+            <List>
+              <ListItem>
+                <S type="bold">Initialise the local theme folder as a git repo.</S>
+                <Text margin="1rem 2rem">I only add the theme folder, it contains the working code.</Text>
+              </ListItem>
+              <ListItem>
+                <S type="bold">Add the bitbucket repo as remote.</S>
+                <Markdown>`git remote add origin`</Markdown>
+              </ListItem>
+              <ListItem>
+                4. Make an initial commit & push.
+              </ListItem>
+              <ListItem>
+                5. Profit
+              </ListItem>
+            </List>
+          </Slide>
 
         </Deck>
       </Spectacle>
